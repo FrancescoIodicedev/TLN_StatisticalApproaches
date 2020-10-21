@@ -1,0 +1,63 @@
+****************************************************************************************************
+Target terms : politics
+Context obtained : concept right fairness abstract idea law respect people right fair equality part involved condition morally correct refers moral principle determining
+Genus obtained : [('philosophy', 46), ('quality', 42), ('law', 41), ('mathematics', 37), ('sociology', 36), ('politics', 34), ('pure_science', 32), ('economy', 29), ('psychology', 26), ('grammar', 26), ('paranormal', 25), ('linguistics', 25), ('statistics', 25), ('religion', 25), ('theology', 24)]
+Similarity: 0.8871928941394784 with Synset('morality.n.01')
+Def : concern with the distinction between good and evil or right and wrong; right or good conduct
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : patience
+Context obtained : ability tolerate able problem wait period time capacity quiet quality long behavior people inclined bear unpleasant fact stress feeling opposed
+Genus obtained : [('psychology', 51), ('quality', 48), ('psychological_features', 48), ('time_period', 41), ('physiology', 37), ('sport', 37), ('pedagogy', 35), ('economy', 34), ('play', 34), ('medicine', 34), ('school', 33), ('factotum', 32), ('paranormal', 31), ('psychiatry', 30), ('person', 30)]
+Similarity: 0.8755299818738118 with Synset('unresponsiveness.n.01')
+Def : the quality of being unresponsive; not reacting; as a quality of people, it is marked by a failure to respond quickly or with emotion to people or events
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : greed
+Context obtained : money desire excessive something typical non attachment strong quality person attached tends accumulate attitude generosity behavior sharing anything anyone intense
+Genus obtained : [('economy', 50), ('psychological_features', 48), ('finance', 39), ('exchange', 36), ('psychoanalysis', 34), ('psychology', 33), ('person', 30), ('money', 30), ('quality', 29), ('factotum', 28), ('commerce', 28), ('physiology', 28), ('enterprise', 28), ('insurance', 27), ('psychiatry', 26)]
+Similarity: 0.8985547471018724 with Synset('longer.n.01')
+Def : a person with a strong desire for something
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : justice
+Context obtained : activity associated area governance entity state population government country discipline regulates territorial rule covernance abstract concept inside social context activity
+Genus obtained : [('politics', 78), ('psychology', 65), ('enterprise', 59), ('law', 58), ('sociology', 57), ('economy', 56), ('pure_science', 55), ('astronautics', 54), ('factotum', 51), ('philosophy', 51), ('exchange', 50), ('administration', 49), ('pedagogy', 49), ('engineering', 48), ('religion', 48)]
+Similarity: 0.8740179216325258 with Synset('law.n.02')
+Def : legal document setting forth rules governing a particular kind of activity
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : food
+Context obtained : edible animal something eat living thing needed life people plant absorb subtance sustain human animal material used organism maintaining process
+Genus obtained : [('gastronomy', 47), ('physiology', 47), ('animal_husbandry', 45), ('chemistry', 45), ('furniture', 44), ('environment', 43), ('pharmacy', 42), ('physics', 41), ('food', 41), ('psychological_features', 41), ('biochemistry', 40), ('buildings', 39), ('home', 39), ('dentistry', 39), ('time_period', 39)]
+Similarity: 0.9082365813152823 with Synset('water.n.06')
+Def : a liquid necessary for the life of most animals and plants
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : screw
+Context obtained : heat object used hot water item temperature room emits warmth thing radiated head raise something produce diffusion objact emanathes air
+Genus obtained : [('home', 67), ('furniture', 64), ('physics', 64), ('enterprise', 62), ('mechanics', 61), ('applied_science', 61), ('engineering', 60), ('hydraulics', 59), ('industry', 58), ('buildings', 57), ('electricity', 55), ('meteorology', 54), ('transport', 53), ('computer_science', 52), ('chemistry', 52)]
+Similarity: 0.7893002811475759 with Synset('piezoelectricity.n.01')
+Def : electricity produced by mechanical pressure on certain crystals (notably quartz or Rochelle salt); alternatively, electrostatic stress produces a change in the linear dimensions of the crystal
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : vehicle
+Context obtained : used people wheel transportation thing transporting good move object transport thing object engine point another moving especially land rideable mean
+Genus obtained : [('transport', 125), ('railway', 105), ('sport', 103), ('enterprise', 102), ('industry', 100), ('mechanics', 99), ('play', 99), ('economy', 97), ('post', 90), ('nautical', 89), ('tourism', 87), ('chess', 87), ('computer_science', 86), ('psychology', 86), ('aviation', 85)]
+Similarity: 0.8655652895749623 with Synset('transportation.n.02')
+Def : the act of moving something from one location to another
+****************************************************************************************************
+
+****************************************************************************************************
+Target terms : radiator
+Context obtained : used metal together object raised fix join thing item part pin helical thread running around object pointed two thin connect
+Genus obtained : [('mechanics', 103), ('industry', 103), ('sport', 100), ('buildings', 95), ('play', 94), ('transport', 88), ('artisanship', 87), ('factotum', 85), ('publishing', 84), ('computer_science', 84), ('telecommunication', 84), ('furniture', 83), ('electricity', 82), ('electronics', 82), ('racing', 82)]
+Similarity: 0.8149273591868377 with Synset('transportation.n.02')
+Def : the act of moving something from one location to another
+****************************************************************************************************

@@ -1,0 +1,55 @@
+For the verb in base form : love pair of semantic type are:
+	< person:person > Count 20 
+	< person:entity > Count 10 
+	< group:artifact > Count 1 
+	< person:attribute > Count 3 
+	< person:Tops > Count 1 
+	< quantity:entity > Count 1 
+	< group:person > Count 3 
+	< person:object > Count 2 
+	< person:group > Count 8 
+	< group:stative > Count 1 
+	< person:communication > Count 2 
+	< group:entity > Count 2 
+	< all:artifact > Count 1 
+	< person:act > Count 1 
+	< person:animal > Count 2 
+	< group:animal > Count 1 
+	< animal:substance > Count 1 
+	< person:time > Count 1 
+	< person:artifact > Count 2 
+	< time:person > Count 1 
+	< state:act > Count 1 
+	< person:location > Count 4 
+	< person:state > Count 1 
+	< state:all > Count 1 
+	< Tops:person > Count 1 
+
+Set Filler1 : 
+person : Count 57
+group : Count 8
+quantity : Count 1
+all : Count 1
+animal : Count 1
+time : Count 1
+state : Count 2
+Tops : Count 1
+
+Set Filler2 : 
+person : Count 25
+entity : Count 13
+artifact : Count 4
+attribute : Count 3
+Tops : Count 1
+object : Count 2
+group : Count 8
+stative : Count 1
+communication : Count 2
+act : Count 2
+animal : Count 3
+substance : Count 1
+time : Count 1
+location : Count 4
+state : Count 1
+all : Count 1
+**************************************************
