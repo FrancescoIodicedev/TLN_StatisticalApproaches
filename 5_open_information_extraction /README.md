@@ -31,7 +31,7 @@ Le relazioni e le entità possono essere costruite usando più di una parola, in
 Dopo aver individuato l'elemento centrale di uno degli argomenti della tripla vengono aggiunte informazioni aggiuntive, concatenando altri token successivi se la loro dipendenza sintattica appartenenza a questo insieme:
  - ["compound", "prep", "conj", "mod"] 
  
-Dopo aver valutato il token `x` se appartiene ad uno dei 3 insiemi indicati sopra il suo testo viene salvato in una variabile temporale concatenando i testi dei token successivi, con il criterio sopra citato, fino a quando non si trovo un token appartente ad un insieme diverso da quallo a cui appartena il token `x`.
+Dopo aver valutato il token `x` se appartiene ad uno dei 3 insiemi indicati sopra il suo testo viene salvato in una variabile temporale concatenando i testi dei token successivi, con il criterio sopra citato, fino a quando non si trovo un token appartenente ad un insieme diverso da quello a cui appartenga il token `x`.
 
 ##Result 
 
