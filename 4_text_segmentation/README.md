@@ -101,8 +101,24 @@ Di conseguenza i valori di `break_point_sentence_target` possono anche essere de
   <img src="img/ws5.png" width="60%" height="60%"/>
 </p>
 
-Con dimensione finestra uguale a 1 è molto più probabile imbattersi in falsi positivi in quanto i valori di coesione vengono calcolato sulle frasi stesse (in quanto la dimensione della finestra è uguale a 1) e quindi i valori di similarità ci danno poche informazioni sulla coesione intragruppo delle frasi.
+Come si può vedere la grandezza ideale di una finestra, per questo testo, è di 4 unità, con questa configurazione il programma riesce ad inferire 3 break point corretti su 4.
 
-Nel caso in cui le finestre abbiamo dimensione 2, la finestra corrispondente allo split point contiene l'ultima frase del primo paragrafo e la prima frase del secondo così però il valore coesione si abbassa impedendoci di trovare i giusti breakpoint.
+<p align="center">
+  <img src="img/matrix.png" width="80%" height="80%"/>
+</p>
 
-Come si può vedere la grandezza ideale di una finestra, per questo testo, è di 4 unità, con questa configurazione il programma riesce ad inferire 2 break point corretti su 4.
+
+E’ anche stato realizzato un metodo che dal testo costruisce una matrice dove sulle:
+- righe : sono indicati i termini rilevanti (non stop word e non numeri) con occorrenze totale nel testo maggiore di 3
+- colonne : indici delle frasi all’interno del testo
+ - celle(i, j): occorrenza parola della riga i nella frase con indice j
+
+
+ 
+
+
+
+Come si può vedere in figura, in questo testo i cambi di discorso non sono troppo evidenti in quanto le parole usate non variano molto da una finestra ad un’altra.
+
+NOTA: per eseguire il programma è necessario che in utils ci sia la versione lexical di NASARI (in questa versione sono presenti 10 feature per ogni item) disponibile al seguente url: 
+•	https://goo.gl/85BubW

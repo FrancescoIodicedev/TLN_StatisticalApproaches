@@ -81,8 +81,8 @@ def plot_result(dataset, verb):
     plt.bar(y_pos, occurence, align='center', alpha=0.5)
     plt.xticks(y_pos, semantic_type)
     plt.title('Semantic cluster of verb {}'.format(verb))
-    plt.xlabel('occurences')
-    plt.ylabel('semantic cluster')
+    plt.xlabel('Semantic types')
+    plt.ylabel('Occurences')
     plt.show()
 
 
