@@ -31,7 +31,7 @@ def get_sentences_with_verb(verb):
 
 
 def extract_subj_dobj(sentence, verb_base_form):
-    token_s, result = nlp(sentence), False
+    token_s = nlp(sentence)
     for token in token_s:
         subj, dobj = '', ''
         if verb_base_form in token.text:
@@ -75,7 +75,7 @@ def plot_result(dataset, verb):
     occurence, semantic_type = [], []
     for k in dataset:
         occurence.append(k[1])
-        semantic_type.append(k[0].replace(':','\n'))
+        semantic_type.append(k[0].replace(':', '\n'))
 
     y_pos = np.arange(len(semantic_type))
     plt.bar(y_pos, occurence, align='center', alpha=0.5)
@@ -90,7 +90,7 @@ def take_second(elem):
     return elem[1]
 
 
-def get_semantic_type(elem, sentence):
+def get_supersense(elem, sentence):
     hypernom, elem_disambigued  = '', None
     if is_pronom(elem):
         hypernom = map_pronom_to_sense(elem)
@@ -104,29 +104,31 @@ def get_semantic_type(elem, sentence):
 
 
 def get_semantic_cluster(sentences, verb_base_form):
-    sentences_analyzed, semantic_cluster = 0, []
+    filler1, filler2 = [], []
+    sentences_analyzed, semantic_type = 0, []
     for s in sentences:
         subj, dobj = extract_subj_dobj(s, verb_base_form)
 
         if subj != '' and dobj != '':
             if subj.lower() not in ambiguous_terms and dobj.lower() not in ambiguous_terms:
-                # print('SUBJ : {} D-OBJ {}'.format(subj, dobj))
-                hypernom_subj = get_semantic_type(subj, s)
-                hypernom_dobj = get_semantic_type(dobj, s)
+                hypernom_subj = get_supersense(subj, s)
+                hypernom_dobj = get_supersense(dobj, s)
 
                 if hypernom_dobj != '' and hypernom_subj != '':
-                    #print('hypernom_dobj {} hypernom_subj {}'.format(hypernom_dobj, hypernom_subj))
                     sentences_analyzed += 1
-                    semantic_type = stringate_value(hypernom_subj, hypernom_dobj)
-                    semantic_cluster.append(semantic_type)
+                    filler1.append(hypernom_subj)
+                    filler2.append(hypernom_dobj)
+                    semantic_values = stringate_value(hypernom_subj, hypernom_dobj)
+                    semantic_type.append(semantic_values)
 
-    return semantic_cluster, sentences_analyzed
+    return semantic_type, sentences_analyzed
 
 
 if __name__ == '__main__':
-    verbs_bf = ['build', 'love', 'go']
+    verbs_bf = ['build', 'love', 'eat']
 
     for verb_base_form in verbs_bf:
+
         sentences = get_sentences_with_verb(verb_base_form)
         print('*' * 50)
         print('\nCurrent verb base form : {}\n'.format(verb_base_form))
@@ -137,6 +139,7 @@ if __name__ == '__main__':
         sts_semantic_cluster = Counter(semantic_cluster)
         common_semantic_cluster = sts_semantic_cluster.most_common(5)
         plot_result(common_semantic_cluster, verb_base_form)
+
         print('\nAnalized {} sentences \nFor the verb in base form : {} pair of semantic type are:\n'
               .format(sentences_analyzed, verb_base_form))
 

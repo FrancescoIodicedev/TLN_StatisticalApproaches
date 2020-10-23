@@ -3,6 +3,7 @@ import numpy as np
 from nltk.corpus import stopwords
 import matplotlib.pyplot as plt
 import spacy
+from prettytable import PrettyTable
 
 nlp = spacy.load('en_core_web_lg')
 
@@ -10,6 +11,7 @@ PATH_NASARI = 'utils/dd-small-nasari-15.txt'
 PATH_TEXT = 'utils/dicaprio_life.txt'
 PATH_NASARI_FULL = 'utils/dd-nasari.txt'
 
+NONE  = 2
 
 def get_sentences(path):
     with open(path) as file:
@@ -219,6 +221,53 @@ def plot_result(break_point, break_point_target, similarities, size_windows):
     plt.show()
 
 
+def is_relevant(token):
+    if token.is_stop or token.is_punct or token.is_space or token.is_digit:
+        return False
+    else:
+        return True
+    #elif token.ent_type_ == 'PERSON' || token.tag_ in ['NNP','NOUN','VERB','']
+
+
+def get_occurences_of_word(sentences, word):
+    occurences = 0
+    for sentence in sentences:
+        if word in sentence:
+            occurences += 1
+    return occurences
+
+
+def get_cohesion_matrix(sentences):
+    sentences_words, relevant_words = [], set()
+    matrix = PrettyTable()
+
+    for sentence in sentences:
+        sentence_word = []
+        tokens = nlp(sentence)
+        for token in tokens:
+            if is_relevant(token):
+                sentence_word.append(token.text)
+                relevant_words.add((token.text, get_occurences_of_word(sentences, token.text)))
+        sentences_words.append(sentence_word)
+
+    indexes = [index for index in range(len(sentences)+1)]
+    indexes[0] = 'SENTENCES'
+    matrix.field_names = indexes
+
+    for w in relevant_words:
+        if w[1] > 3:
+            row = [w[0]]
+            for index, sentence in enumerate(sentences):
+                if w[0] in sentence:
+                    row.append(1)
+                else:
+                    row.append('')
+            matrix.add_row(row)
+
+    return matrix
+
+
+
 if __name__ == '__main__':
     # 1 Get sentences
     sentences = get_sentences(PATH_TEXT)
@@ -241,3 +290,8 @@ if __name__ == '__main__':
     break_point = find_break_points(similarities, len(break_point_sentence_target))
     # 6 Get result
     plot_result(break_point, break_point_sentence_target, similarities, size_windows)
+
+    matrix = get_cohesion_matrix(sentences)
+    matrix.vrules = NONE
+
+    print(matrix)
