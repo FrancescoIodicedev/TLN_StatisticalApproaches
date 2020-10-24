@@ -103,20 +103,14 @@ Di conseguenza i valori di `break_point_sentence_target` possono anche essere de
 
 Come si può vedere la grandezza ideale di una finestra, per questo testo, è di 4 unità, con questa configurazione il programma riesce ad inferire 3 break point corretti su 4.
 
-<p align="center">
-  <img src="img/matrix.png" width="80%" height="80%"/>
-</p>
-
-
 E’ anche stato realizzato un metodo che dal testo costruisce una matrice dove sulle:
 - righe : sono indicati i termini rilevanti (non stop word e non numeri) con occorrenze totale nel testo maggiore di 3
 - colonne : indici delle frasi all’interno del testo
  - celle(i, j): occorrenza parola della riga i nella frase con indice j
 
-
- 
-
-
+<p align="center">
+  <img src="img/matrix.png" width="80%" height="80%"/>
+</p>
 
 Come si può vedere in figura, in questo testo i cambi di discorso non sono troppo evidenti in quanto le parole usate non variano molto da una finestra ad un’altra.
 
